@@ -4,14 +4,13 @@ on: [push]
 
 jobs:
   cypress-run:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v4.2.0
+
+      - name: Cypress tests
+        uses: ./
         with:
-          build: npm run build
-          start: npm start
+          working-directory: examples/v10/basic
+          build: npx cypress info
