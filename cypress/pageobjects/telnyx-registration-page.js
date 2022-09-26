@@ -30,10 +30,10 @@ export class TelnyxRegistrationPage {
         this.getPasswordInput().type(password);
     }
     clickTermsCheckbox() {
-        this.getTermsCheckbox().click();
+        this.getTermsCheckbox().click({scrollBehavior: 'center'});
     }
     clickCreateAccountButton() {
-        this.getCreateAccountButton().click();
+        this.getCreateAccountButton().click({scrollBehavior: 'center'});
     }
     
 }
