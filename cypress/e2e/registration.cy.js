@@ -25,7 +25,6 @@ describe('Testing the sign up page', () => {
         cy.typeRegistration(registrationPage, testuser);
         registrationPage.clickTermsCheckbox();
         registrationPage.clickCreateAccountButton();
-        cy.get('svg[name="emailNew"] + h1', {timeout: 30000}).should('be.visible');
-        cy.get('svg[name="emailNew"] + h1 + div strong').should('be.visible').should('contain', testuser.email);
+        cy.ifNoCaptchaErrorThenAssertRegistration();       
     })
 })
