@@ -7,11 +7,7 @@ describe('Testing the main page', () => {
 
     beforeEach(() => {
         homePage.visit();
-        cy.get('body').then(($body) => { //Close the cookie pop-up window, if present
-            if($body.find('footer + div button[aria-label="close and deny"]').length){
-                cy.get('footer + div button[aria-label="close and deny"]').click();
-            }
-        })
+        cy.closeCookiePopup();
     })
 
     it('Clicking the "Try for free" button redirects to the sign up page', () => {
@@ -36,21 +32,18 @@ describe('Testing the main page', () => {
     it('The “Connect on LinkedIn” link in the footer', () => {
         homePage.getLinkedInLink()
         .should('be.visible')
-        .should('have.prop', 'href')
-        .and('equal', 'https://www.linkedin.com/company/telnyx/');
+        .should('have.attr', 'href', 'https://www.linkedin.com/company/telnyx/');
     })
 
     it('The “Follow on Twitter” link in the footer', () => {
         homePage.getTwitterLink()
         .should('be.visible')
-        .should('have.prop', 'href')
-        .and('equal', 'https://twitter.com/telnyx');
+        .should('have.attr', 'href', 'https://twitter.com/telnyx');
     })
 
     it('The “Follow on Facebook” link in the footer', () => {
         homePage.getFacebookLink()
         .should('be.visible')
-        .should('have.prop', 'href')
-        .and('equal', 'https://www.facebook.com/Telnyx/');
+        .should('have.attr', 'href', 'https://www.facebook.com/Telnyx/');
     })
 })

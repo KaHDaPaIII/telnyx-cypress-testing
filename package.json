@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open",
+    "cypress:open:hideXHR": "cypress open --config-file hideXHR.config.js",
     "cypress:run": "cypress run",
     "cypress:run:record": "cypress run --record",
     "cypress:run:headed": "cypress run --headed",
