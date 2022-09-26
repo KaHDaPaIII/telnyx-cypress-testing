@@ -4,7 +4,7 @@ module.exports = defineConfig({
   projectId: "ez4oxm",
   e2e: {
     env: {
-      hideXHR: false
+      hideXHR: true
     },
   },
 });

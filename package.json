@@ -6,7 +6,9 @@
   "scripts": {
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
+    "cypress:run:record": "cypress run --record",
     "cypress:run:headed": "cypress run --headed",
+    "cypress:run:headed:hideXHR": "cypress run --headed --config-file hideXHR.config.js",
     "cypress:run:homepage": "cypress run --spec 'cypress/e2e/homepage.cy.js'",
     "cypress:run:login": "cypress run --spec 'cypress/e2e/login.cy.js'",
     "cypress:run:registration": "cypress run --spec 'cypress/e2e/registration.cy.js'",
