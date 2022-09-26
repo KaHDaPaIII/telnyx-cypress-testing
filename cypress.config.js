@@ -8,7 +8,5 @@ module.exports = defineConfig({
     env: {
       hideXHR: true
     },
-    video: false,
-    screenshotOnRunFailure: false,
   },
 });
