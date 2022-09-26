@@ -13,7 +13,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4.2.0
         with: 
-          #config: video=false
+          config: video=false
           config-file: hideXHR.config.js
           record: true
           parallel: true
