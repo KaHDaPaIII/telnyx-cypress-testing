@@ -24,7 +24,7 @@ describe('Testing the sign up page', () => {
         registrationPage.getFullnameErrorMessage().should('be.visible');
     })
 
-    it.skip('Checking the registration with valid random generated inputs', () => { //Added reCAPTCHA checkbox
+    it('Checking the registration with valid random generated inputs', () => {
         const testuser = new UserCredentials();
         cy.typeRegistration(registrationPage, testuser);
         registrationPage.clickTermsCheckbox();

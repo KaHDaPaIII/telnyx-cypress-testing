@@ -33,5 +33,4 @@ Cypress.Commands.add('typeRegistration', (page, user) => {
     page.typeEmail(user.email);
     page.typeFullname(user.fullname);
     page.typePassword(user.password);
-    console.log(user.password);
 })
