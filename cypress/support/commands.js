@@ -24,3 +24,13 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+Cypress.Commands.add('typeLogin', (page, user) => {
+    page.typeEmail(user.email);
+    page.typePassword(user.password);
+})
+
+Cypress.Commands.add('typeRegistration', (page, user) => {
+    page.typeEmail(user.email);
+    page.typeFullname(user.fullname);
+    page.typePassword(user.password);
+})
