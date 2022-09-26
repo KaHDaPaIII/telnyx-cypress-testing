@@ -8,7 +8,8 @@ export class UserCredentials {
         this.lastname = db.lastName[Math.floor(Math.random() * db.lastName.length)].toLowerCase();
         this.lastname = this.lastname.charAt(0).toUpperCase() + this.lastname.slice(1); // first letter to upper case
         this.fullname = this.firstname + ' ' + this.lastname;
-        this.email = this.firstname.toLowerCase() + '.' + this.lastname.toLowerCase() + Math.floor(400 + Math.random() * 99999) + '@' + db.domains[Math.floor(Math.random() * db.domains.length)];
+        this.email = this.firstname.toLowerCase() + '.' + this.lastname.toLowerCase() + Math.floor(400 + Math.random() * 99999) + '@'; // + db.domains[Math.floor(Math.random() * db.domains.length)];
+        this.email += 'gmail.com';
     }
 
     randomUsername(n){

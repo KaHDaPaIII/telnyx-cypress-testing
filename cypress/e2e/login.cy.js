@@ -1,7 +1,7 @@
 import "cypress-real-events/support";
 import { TelnyxHomePage } from '../pageobjects/telnyx-home-page.js';
 import { TelnyxLoginPage } from '../pageobjects/telnyx-login-page.js';
-import { UserCredentials } from "../support/generate-crdentials.js";
+import { UserCredentials } from "../support/generate-credentials.js";
 
 describe('Testing the sign in page', () => {
 
