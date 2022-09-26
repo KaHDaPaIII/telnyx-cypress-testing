@@ -32,13 +32,13 @@ Cypress.Commands.add('closeCookiePopup', () => {
     })
 })
 
-Cypress.Commands.add('ifNoCaptchaErrorThenAssertRegistration', () => {
+Cypress.Commands.add('ifNoCaptchaErrorThenAssertRegistration', (email) => {
     cy.get('form[aria-label="signup-form"]').then((form) => {
         if (form.find('#signup-form_error').length > 0) {
             cy.get('#signup-form_error span').should("have.text", "reCAPTCHA validation required");
         } else {
             cy.get('svg[name="emailNew"] + h1', {timeout: 30000}).should('be.visible');
-            cy.get('svg[name="emailNew"] + h1 + div strong').should('be.visible').should('contain', testuser.email);
+            cy.get('svg[name="emailNew"] + h1 + div strong').should('be.visible').should('contain', email);
         }
     });
 })

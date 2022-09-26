@@ -25,6 +25,6 @@ describe('Testing the sign up page', () => {
         cy.typeRegistration(registrationPage, testuser);
         registrationPage.clickTermsCheckbox();
         registrationPage.clickCreateAccountButton();
-        cy.ifNoCaptchaErrorThenAssertRegistration();       
+        cy.ifNoCaptchaErrorThenAssertRegistration(testuser.email);       
     })
 })
