@@ -1,7 +1,7 @@
 # telnyx-cypress-testing
 ## About the project
 Implementation of 10 test cases using Cypress.  
-Site used for testing: https://telnyx.com/
+Site used for testing: https://telnyx.com/  
 Test cases are described [here](https://docs.google.com/document/d/1pJn6MhUNdYHarWk-F334tFaZOYD5zVb5VqQnQ9pSV-c/edit?usp=sharing).
 
 ## Getting started
