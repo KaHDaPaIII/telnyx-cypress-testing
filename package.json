@@ -4,8 +4,13 @@
   "description": "Automation cypress tests for telnyx.com",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:run:headed": "cypress run --headed",
+    "cypress:run:homepage": "cypress run --spec 'cypress/e2e/homepage.cy.js'",
+    "cypress:run:login": "cypress run --spec 'cypress/e2e/login.cy.js'",
+    "cypress:run:registration": "cypress run --spec 'cypress/e2e/registration.cy.js'",
+    "cypress:run:chrome": "cypress run --browser chrome"    
   },
   "author": "KaHDaPaIII",
   "license": "ISC",
